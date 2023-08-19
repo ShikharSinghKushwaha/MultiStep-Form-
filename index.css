@@ -1,0 +1,541 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;700&display=swap');
+
+*{
+    margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: rgb(238,245,255);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+    font-family: 'Ubuntu', sans-serif;
+    
+}
+
+.main-container{
+    display: flex;
+    background: #fff;
+    width: 65%;
+    height: 80vh;
+    gap: 2em;
+    padding: 10px;
+    border-radius: 10px;
+}
+.left-design{
+    height:100%;
+    position: relative;
+    width: 35%;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.main-design{
+    width: 100%;
+    height: 100%;
+    /* border: 2px solid blue; */
+}
+
+.desktop{
+    display: block;
+}
+
+.mobile{
+    display: none;
+}
+
+.steps-done{
+    width: 80%;
+    top: 10px;
+    height: 50%;
+    position: absolute;
+      /* border: 2px solid red;  */ 
+    text-align: center;
+    /* left: 50%;
+    right: 50%;
+    top: 0;
+    transform: translate(-50%,-50%); */
+    display: grid;
+    place-items: center;
+    
+}
+
+.steps{
+    display: flex;
+    align-items: center;
+    width: 200px;
+     /* justify-content: space-evenly;  */
+    gap:.5em;
+    margin-top: 3px;
+    text-align: left;
+  height: 60px;
+    /* border: 2px solid rgb(0, 132, 255); */
+    text-transform: uppercase;
+}
+
+.steps-text h3{
+    color: rgb(109,205,150);
+    font-size: .9em;
+}
+
+.steps-text h1{
+    color: white;
+    font-size: 16px;
+}
+.steps-text h3,.steps-text h1{
+    
+    line-height: 18px;
+}
+.num{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6em;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    color: white;
+    border: 2px solid white; 
+    transition: .3s;
+    cursor: pointer;
+}
+
+.num:hover{
+    background-color:black;
+}
+
+
+/* FIRST QUIZ 
+                      PAGE DESIGN */
+
+.right-design{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    /* gap: 1em; */
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    /* border: 2px solid black; */
+    /* place-items: ;  */
+    /* padding: 9px; */
+    position: relative; 
+    overflow:hidden; 
+}
+.right-container{
+ padding: 5px;
+min-width:100%;
+/* border: 2px solid red;  */
+height:80%; 
+/* margin-top: 20px; */
+ position: relative;
+top: 0;
+left: 0; 
+/* transform: translateX(-200%); */
+}
+
+
+
+.right-container h1{
+    margin-bottom: 5px;
+}
+
+.right-container h4{
+    margin-bottom: 20px;
+}
+.quiz-form{
+    margin-top: 1.3em;
+    height: 70%; 
+    width:100%; 
+     /* position: absolute; */ 
+}
+.quiz-form label{
+    font-size: 1.3em;
+    margin-top: .8em;
+}
+.quiz-form input{
+     margin-top: .8em; 
+    margin-bottom: 0em;
+    padding: 9px;
+    width: 98%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid gray;
+    transition: .3s;
+   
+    /* border:2px solid transparent; */
+}
+
+.quiz-form input:focus{
+    border: 2px solid blue;
+    
+}
+.btn-contains{
+    width: 100%;
+    /* border: 2px solid rgb(0, 255, 64); */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+   
+    padding: 3px; 
+    margin-top: 15px;
+}
+
+
+.error{
+
+ border: none;
+ padding-left: -20px;
+ opacity: 0;
+}
+
+.msg-show{
+    opacity: 1;
+    /* font-weight: bold; */
+    color: red;
+}
+
+#nextBtn{
+    margin-left: auto;
+}
+#nextBtn,#goback{
+    padding: 12px;
+    color: white;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    width: 100px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: rgb(36, 96, 146);
+}
+
+#goback{
+    background-color: white;
+    color: black;
+    font-weight: 600;
+}
+
+
+/* BILLING CONTAINER SECOND QUIZ DATA*/
+
+.billing-container{
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ gap: 10px;
+ margin-top: 20px;
+ /* border: 2px solid red; */
+}
+
+.billing-price{
+    width: 150px;
+    height: 170px;
+    padding: 15px;
+    border-radius: 9px;
+   border: 2.8px solid gray;
+   transition: .3s;
+   cursor:pointer;
+}
+.billing-price:hover{
+    border-color: blue;
+    background-color: rgb(248,249,254);
+}
+
+.billing-price h3{
+    margin-top: 2.5em;
+}
+
+.billing-price h5{
+    margin-top: 3px;
+}
+
+.toggle-btn{
+    width: 100%;
+    background-color: rgb(200,248,254);
+    margin-top: 20px;
+    padding: 10px;
+    border-radius: 8px;
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.toggle-container{
+    width: 55px;
+    padding: 10px;
+    border-radius:22px;
+    border: 2px solid blue;
+    position: relative;
+    top:0;
+    left:0;
+    background: rgb(36, 96, 146);
+    cursor: pointer;
+}
+
+.inner-toggle{
+    height: 100%;
+    width: 20px;
+   
+    border-radius: 30px;
+    padding: 3px;
+    background:rgb(250, 247, 247) ;
+    position: absolute;
+    top:0px;
+    left:0px;
+    box-shadow: inset 0px 0px 3px 1px rgb(151, 146, 146);
+}
+
+
+
+/* THID QUIZ 
+             STYLIING */
+
+.services{
+    width: 100%;
+    display: grid;
+    gap:1em;
+    /* border: 2px solid red; */
+    height: auto;
+}
+
+
+.services-box{
+    width: 100%;
+    border: 2px solid gray;
+    border-radius: 8px;
+    padding: 19px;
+    display: flex;
+    /* gap: 0em; */
+    position: relative;
+    transition: .6s;
+    cursor: pointer;
+}
+.services-box:hover{
+    border: 2px solid blue;
+    background: rgb(248,249,254);
+}
+.services-box input{
+    cursor: pointer;
+  
+}
+
+.services span{
+    margin-left: 15px;
+}
+
+#main-price{
+    float:right;
+    /* border:1px solid black; */
+
+}
+
+.price-num{
+    /* float: right; */
+    text-align: right;
+    /* border: 2px solid black; */
+    display: block;
+    margin-left: auto;
+    width: 20px;
+    padding: 3px;
+}
+
+.price{
+    color:purple;
+    float: right;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-align: right;
+    position: absolute;
+    right:10px;
+    top: 25px;
+}
+
+.label-text{
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.finishing-up{
+    background-color:rgb(248,249,253);
+    padding: 20px;
+    display: grid;
+    gap: .6em;
+    outline: 2px solid black;
+    border-radius: 7px;
+    position: relative;
+}
+
+.bill-box:first-child:after{
+    content: '';
+    position: absolute;
+    width: 91%;
+    height: 2px;
+    background-color: black;
+    top: 68px;
+}
+
+.bill-box{
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+}
+
+.bill-box h4:first-child{
+    margin-bottom: 5px;
+    color: black;
+}
+
+.bill-box h5{
+    color: gray;
+}
+
+
+.last-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.last-msg{
+    /* border: 2px solid black; */
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.symbol{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: pink;
+    width: 50px;
+    height: 50px;
+    /* padding: 10px; */
+    border-radius: 50%;
+}
+.right-icon{
+    font-size: 4em;
+    font-weight: bold;
+    /* margin-bottom: .5em; */
+   
+   
+}
+.last-msg h2{
+    text-decoration: underline;
+    line-height: 30px;
+}
+.last-msg h4{
+    color: gray;
+    line-height: 20px;
+}
+
+
+@media(max-width:980px){
+    body{
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+    .main-container{
+        display: grid;
+        place-items: center;
+        width: 100%;
+        height: 100vh;
+        position: relative;
+        background-color:rgb(238,245,255);
+    }
+    .left-design{
+        height:220px;
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+    
+    }
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+    .steps-done{
+        height: 50%;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        top: -10px;
+    }
+    .num{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1em;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        color: white;
+        border: 2px solid white; 
+        transition: .3s;
+        cursor: pointer;
+    }
+    .steps{
+        display:grid;
+        place-items: center;
+        text-align: center;
+    }
+    .steps-text{
+      
+         display: none;
+    }
+    .main-design{
+        width: 100%;
+    } 
+    .right-design{
+        width: 90%;
+        height: 100% ;
+        display: flex;
+        /* border: 3px solid blue;   */
+        /* overflow:hidden;   */
+        top:120px;
+        
+    }
+    .right-container{
+     
+    width:100%;
+    padding: 19px;
+    border-radius: 10px;   
+    height:70%;  
+    background-color: rgb(255, 255, 255); 
+    /* transform: translateX(-200%); */
+    }
+    .btn-contains{
+   margin-top: 0px;
+   width: 100%;
+   position: absolute;
+   padding:7px;
+   background-color: white;
+   bottom: -60px;
+   border-radius: 10px;
+   left: 0;
+   right: 0;
+     
+    }
+
+}
